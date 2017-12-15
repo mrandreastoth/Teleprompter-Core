@@ -1,5 +1,5 @@
 ﻿/**
- * @license Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or http://ckeditor.com/license
  */
 
@@ -13,10 +13,10 @@
  * (1) http://ckeditor.com/builder
  *     Visit online builder to build CKEditor from scratch.
  *
- * (2) http://ckeditor.com/builder/fd72d0857031aaef56d5f29ab94af0bb
+ * (2) http://ckeditor.com/builder/dcf0544bfcc559b504e5cac1047a928f
  *     Visit online builder to build CKEditor, starting with the same setup as before.
  *
- * (3) http://ckeditor.com/builder/download/fd72d0857031aaef56d5f29ab94af0bb
+ * (3) http://ckeditor.com/builder/download/dcf0544bfcc559b504e5cac1047a928f
  *     Straight download link to the latest version of CKEditor (Optimized) with the same setup as before.
  *
  * NOTE:
@@ -28,25 +28,27 @@ var CKBUILDER_CONFIG = {
 	skin: 'bootstrapck',
 	preset: 'full',
 	ignore: [
-		'.bender',
-		'bender.js',
-		'bender-err.log',
-		'bender-out.log',
-		'dev',
 		'.DS_Store',
+		'.bender',
 		'.editorconfig',
 		'.gitattributes',
 		'.gitignore',
-		'gruntfile.js',
 		'.idea',
 		'.jscsrc',
 		'.jshintignore',
 		'.jshintrc',
-		'less',
 		'.mailmap',
+		'.travis.yml',
+		'README.md',
+		'bender-err.log',
+		'bender-out.log',
+		'bender.ci.js',
+		'bender.js',
+		'dev',
+		'gruntfile.js',
+		'less',
 		'node_modules',
 		'package.json',
-		'README.md',
 		'tests'
 	],
 	plugins : {
@@ -69,7 +71,6 @@ var CKBUILDER_CONFIG = {
 		'fastimage' : 1,
 		'filebrowser' : 1,
 		'find' : 1,
-		'flash' : 1,
 		'font' : 1,
 		'format' : 1,
 		'forms' : 1,
@@ -87,7 +88,6 @@ var CKBUILDER_CONFIG = {
 		'list' : 1,
 		'liststyle' : 1,
 		'magicline' : 1,
-		'newpage' : 1,
 		'pagebreak' : 1,
 		'pastebase64' : 1,
 		'pastefromword' : 1,
@@ -97,7 +97,6 @@ var CKBUILDER_CONFIG = {
 		'quicktable' : 1,
 		'removeformat' : 1,
 		'save' : 1,
-		'scayt' : 1,
 		'selectall' : 1,
 		'sharedspace' : 1,
 		'showblocks' : 1,
@@ -117,7 +116,6 @@ var CKBUILDER_CONFIG = {
 		'toolbar' : 1,
 		'undo' : 1,
 		'wordcount' : 1,
-		'wsc' : 1,
 		'wysiwygarea' : 1
 	},
 	languages : {

@@ -65,6 +65,9 @@ body {
 	border: none;
 	opacity: 0.45;
 	cursor: crosshair;
+	-webkit-/*backdrop-*/filter: blur(10px);
+	/*backdrop-*/filter: url('/media/blur.svg#blur');
+	/*backdrop-*/filter: blur(10px);
 }
 
 #touchOverlay {
