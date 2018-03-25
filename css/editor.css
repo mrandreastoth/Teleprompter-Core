@@ -22,6 +22,9 @@ body {
 .navbar-brand, .nav-item.nav-link {
 	font-family: Tahoma, Geneva, sans-serif;
 }
+.full-width {
+	width: 100%;
+}
 /*.nav-item.dropdown {
 	word-break: keep-all;
 }*/
@@ -30,11 +33,16 @@ body {
 }
 #setupTabsContent {
 	z-index: 200;
-	position: fixed;
 	width: 100%;
+	/*position: fixed;*/
 	height: auto;
-	max-height: 50vh;
+	max-height: calc( 100vh - 200px );
 	background: linear-gradient(to bottom, rgba(255,255,255,1) 12%,rgba(255,255,255,0.8) 100%);
+	overflow-y: auto;
+}
+.tab-pane {
+	padding: 12px 0;
+	border-bottom: solid 1px lightblue;
 }
 article {
 	/*z-index: -100;*/
@@ -123,6 +131,10 @@ article {
 		top: -50px;
 		z-index: 300;
 	}
+	#setupTabsContent {
+		position: sticky;
+		top: 48px;
+	}
 	#toolbar-container {
 		top: 48px;
 	}
@@ -133,6 +145,9 @@ article {
 		position: sticky;
 		top: 0;
 		z-index: 300;
+	}
+	#setupTabsContent {
+		position: fixed;
 	}
 	#toolbar-container {
 		top: 56px;

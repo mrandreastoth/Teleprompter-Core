@@ -105,6 +105,9 @@
 		    <div class="col-lg-auto col-xl-4 mr-auto">
 				<ul class="nav mr-auto nav-tabs ml-auto tab-bottom" id="setupTabs" role="tablist">
 					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" role="tab" href="#tabs-closed" aria-controls="tabs-closed" aria-selected="true">X</a>
+					</li>
+					<li class="nav-item">
 						<a class="nav-link" data-toggle="tab" role="tab" href="#settings" aria-controls="settings" aria-selected="false">S</a>
 					</li>
 					<li class="nav-item">
@@ -130,6 +133,8 @@
 		</div>
 	</div>
 	<div class="tab-content" id="setupTabsContent">
+		<div id="tabs-closed" role="tabpanel" aria-labelledby="tabs-closed">
+		</div>
 		<div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="home-tab">
 			<!-- Controls -->
 			<div class="container">
@@ -177,35 +182,56 @@
 						</select>
 					</div>
 				</div>
-			</div>
-			<div class="container">
 				<div class='row'>
-					<div class='col-md-10 col-sm-10'>
-						<div class='col-md-4 col-sm-4'>
-							<small>
-								<label for="speed">Speed:</label>
-								<label for="speed" id="speedValue">4.0</label>
-							</small>
-							<input type="range" id="speed" name="speed" data-slider-value="4.0" data-slider-step="0.5" data-slider-min="1" data-slider-max="20" data-slider-ticks="[1,4,20]" data-slider-ticks-snap-bounds="0">
-						</div>
-						<div class='col-md-4 col-sm-4'>
-							<small>
-								<label for="acceleration">Acceleration curve:</label>
-								<label for="acceleration" id="accelerationValue">1.45</label>
-							</small>
-							<input type="range" id="acceleration" name="acceleration" data-slider-value="1.45" data-slider-min="0.5" data-slider-max="1.8" data-slider-step="0.05" data-slider-ticks="[0.5,1.45,1.8]" data-slider-ticks-snap-bounds="0">
-						</div>
-						<div class='col-md-4 col-sm-4'>
-							<small>
-								<label for="fontSize">Font scale:</label>
-								<label for="fontSize" id="fontSizeValue">120</label><label for="fontSize">%</label>
-							</small>
-							<input type="range" id="fontSize" name="fontSize" data-slider-value="120" data-slider-min="50" data-slider-max="250" data-slider-step="5" data-slider-ticks="[50,120,250]" data-slider-ticks-snap-bounds="0">
-						</div>
+					<div class='col-xs-12 col-sm-6 col-md-3'>
+						<small>
+							<label for="speed">Speed:</label>
+							<label for="speed" id="speedValue">4.0</label>
+						</small>
+						<input type="range" id="speed" name="speed" data-slider-value="4.0" data-slider-step="0.5" data-slider-min="1" data-slider-max="20" data-slider-ticks="[1,4,20]" data-slider-ticks-snap-bounds="0">
 					</div>
-					<div class='col-md-2 col-sm-2'>
+					<div class='col-xs-12 col-sm-6 col-md-3'>
+						<small>
+							<label for="acceleration">Acceleration curve:</label>
+							<label for="acceleration" id="accelerationValue">1.45</label>
+						</small>
+						<input type="range" id="acceleration" name="acceleration" data-slider-value="1.45" data-slider-min="0.5" data-slider-max="1.8" data-slider-step="0.05" data-slider-ticks="[0.5,1.45,1.8]" data-slider-ticks-snap-bounds="0">
+					</div>
+					<div class='col-xs-12 col-sm-6 col-md-3'>
+						<small>
+							<label for="fontSize">Font scale:</label>
+							<label for="fontSize" id="fontSizeValue">120</label><label for="fontSize">%</label>
+						</small>
+						<input type="range" id="fontSize" name="fontSize" data-slider-value="120" data-slider-min="50" data-slider-max="250" data-slider-step="5" data-slider-ticks="[50,120,250]" data-slider-ticks-snap-bounds="0">
+					</div>
+					<div class='col-xs-12 col-sm-6 col-md-3'>
+						<small>
+							<label for="fontSize">Width margin:</label>
+							<label for="fontSize" id="fontSizeValue">80</label><label for="fontSize">%</label>
+						</small>
+						<input type="range" id="fontSize" name="fontSize" data-slider-value="20" data-slider-min="0" data-slider-max="50" data-slider-step="1" data-slider-ticks="[0,20,40]" data-slider-ticks-snap-bounds="0">
+					</div>
+					<div class='col-sm-3'>
 						<small>
 							<label for="timer">Timer</label>
+						</small><br>
+						<div id="timer" class="btn-group  btn-group-sm btn-toggle"> 
+						    <button class="btn btn-default">On</button>
+						    <button class="btn btn-primary active">Off</button>
+						</div>
+					</div>
+					<div class='col-sm-3'>
+						<small>
+							<label for="timer">Remote <span class="d-sm-none d-md-inline">Control</span></label>
+						</small><br>
+						<div id="timer" class="btn-group  btn-group-sm btn-toggle"> 
+						    <button class="btn btn-default">On</button>
+						    <button class="btn btn-primary active">Off</button>
+						</div>
+					</div>
+					<div class='col-sm-3'>
+						<small>
+							<label for="timer">Speech <span class="d-sm-none d-md-inline">Recognition</span></label>
 						</small><br>
 						<div id="timer" class="btn-group  btn-group-sm btn-toggle"> 
 						    <button class="btn btn-default">On</button>
@@ -234,8 +260,37 @@
 				</div>
 			</div>
 		</div>
-		<div class="tab-pane fade" id="emojis" role="tabpanel" aria-labelledby="profile-tab">... 2 ...</div>
-		<div class="tab-pane fade" id="images" role="tabpanel" aria-labelledby="contact-tab">... 3 ...</div>
+		<div class="tab-pane fade" id="emojis" role="tabpanel" aria-labelledby="profile-tab">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12 col-md-4 col-lg-3">
+						<input class="full-width" type="text" name="emojis">
+					</div>
+					<div class="col-sm-12 col-md-8 col-lg-9">
+						Emojis list
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						Big Emojis
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-pane fade" id="images" role="tabpanel" aria-labelledby="contact-tab">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-12">
+						<input type="button" name="load_image">				
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						Images grid
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="container-fluid" id="toolbar-container">
 		<div id="toolbar"></div>
